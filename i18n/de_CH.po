@@ -1,0 +1,269 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_contract_football_fvrz
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-09 09:36+0000\n"
+"PO-Revision-Date: 2026-06-09 11:37+0200\n"
+"Last-Translator: Michael Blickenstorfer <michi@blicki.ch>\n"
+"Language-Team: \n"
+"Language: de_CH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "&gt; 26km"
+msgstr "&gt; 26km"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "01 - 05km"
+msgstr "01 - 05klm"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__xshort
+msgid "01 - 05km between home and club sport facility"
+msgstr "01 - 05km zwischen Wohnort und Sportanlage Stammverein"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "06 - 15km"
+msgstr "06 - 15km"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__short
+msgid "06 - 15km between home and club sport facility"
+msgstr "06 - 15km zwischen Wohnort und Sportanlage Stammverein"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1 camp or weekend"
+msgstr "1 Camp oder Wochenende"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1 league/cup match"
+msgstr "1 Liga-/Cup-Spiel"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1 team meeting"
+msgstr "1 Teammeeting"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1 trainer meeting"
+msgstr "1 Trainersitzung"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1 trainingscamp"
+msgstr "1 Trainingscamp"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1 trainingsweekend"
+msgstr "1 Trainingswochenende"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1-2 league/cup matches"
+msgstr "1-2 Liga-/Cup-Spiele"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "1-2 training sessions"
+msgstr "1-2 Trainings"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "16 - 25km"
+msgstr "16 - 25km"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__medium
+msgid "16 - 25km between home and club sport facility"
+msgstr "16 - 25km zwischen Wohnort und Sportanlage Stammverein"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "2 team meetings"
+msgstr "2 Teammeetings"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "2 tournaments"
+msgstr "2 Turniere"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "2 trainer meetings"
+msgstr "2 Trainersitzungen"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "2-3 training sessions"
+msgstr "2-3 Trainings"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "3 team meetings"
+msgstr "3 Teammeetings"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "3 tournaments"
+msgstr "3 Turniere"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "3-4 training sessions"
+msgstr "3-4 Trainings"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "6 tournament"
+msgstr "6 Turniere"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "<strong>1</strong>"
+msgstr "<strong>1</strong>"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "<strong>2'900.00</strong>"
+msgstr "<strong>2'900.00</strong>"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "<strong>2</strong>"
+msgstr "<strong>2</strong>"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "<strong>3</strong>"
+msgstr "<strong>3</strong>"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "<strong>4'000.00</strong>"
+msgstr "<strong>4'000.00</strong>"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "<strong>6'000.00</strong>"
+msgstr "<strong>6'000.00</strong>"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__long
+msgid ">26km between home and club sport facility"
+msgstr ">26km zwischen Wohnort und Sportanlage Stammverein"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "Annually"
+msgstr "Jährlich"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model,name:hr_contract_football_fvrz.model_hr_contract
+msgid "Employee Contract"
+msgstr "Mitarbeitervertrag"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields,field_description:hr_contract_football_fvrz.field_hr_contract__fvrz_total_allowance_amount
+msgid "FVRZ Total Allowance Amount"
+msgstr "FVRZ Total Spesenbetrag"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields,field_description:hr_contract_football_fvrz.field_hr_contract__fvrz_trainer_travel_allowance
+msgid "FVRZ Trainer Flat-rate travel allowance"
+msgstr "FVRZ Pauschale Fahrspesen für Trainer"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields,field_description:hr_contract_football_fvrz.field_hr_contract__fvrz_trainer_travel_allowance_amount
+msgid "FVRZ Trainer Flat-rate travel allowance Amount"
+msgstr "FVRZ Pauschaler Spesenbetrag für Trainer"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "FVRZ Trainer General Allowance"
+msgstr "FVRZ Jahrespauschale für Trainer"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields,field_description:hr_contract_football_fvrz.field_hr_contract__fvrz_trainer_level
+msgid "FVRZ Trainer Level"
+msgstr "FVRZ Trainerstufe"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields,field_description:hr_contract_football_fvrz.field_hr_contract__fvrz_trainer_level_amount
+msgid "FVRZ Trainer Level Amount"
+msgstr "FVRZ Trainerstufe Betrag"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "FVRZ Trainer Travel Allowance"
+msgstr "FVRZ Trainerstufe Fahrspesen"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "Football FVRZ"
+msgstr "Fussball - FVRZ"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "Level"
+msgstr "Stufe"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+#, fuzzy
+#| msgid "Per Month"
+msgid "Per Season"
+msgstr "Pro Saison"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid "Per Week"
+msgstr "Pro Woche"
+
+#. module: hr_contract_football_fvrz
+#. odoo-python
+#: code:addons/hr_contract_football_fvrz/models/hr_contract.py:0
+msgid ""
+"Please select the FVRZ Trainer Level before selecting the Flat-rate travel "
+"allowance."
+msgstr ""
+"Bitte zunächst die Trainerstufe festlegen, bevor die Fahrdistanz ausgewählt "
+"wird."
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__trainer_level_1
+msgid "Trainer Level 1"
+msgstr "Trainerstufe 1"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__trainer_level_2
+msgid "Trainer Level 2"
+msgstr "Trainerstufe 2"
+
+#. module: hr_contract_football_fvrz
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__trainer_level_3
+msgid "Trainer Level 3"
+msgstr "Trainerstufe 3"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid ""
+"Travel Allowance is based on the distance <strong>(Privat Home =&gt; Club "
+"fields =&gt; Privat Home)</strong>."
+msgstr ""
+"Pauschale Fahrspesen berechnen sich auf Basis der Distanz <strong>(Wohnort "
+"=&gt; Sportanlagen Stammverein =&gt; Wohnort)</strong>"

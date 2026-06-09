@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_contract_form_football_fvrz" model="ir.ui.view">
+            <field name="name">hr.contract.form.football.fvrz</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="football_fvrz" string="Football FVRZ">
+                        <group>
+                            <group>
+                                <field name="fvrz_trainer_level"/>
+                                <field name="fvrz_trainer_travel_allowance"/>
+                            </group>
+                            <group>
+                                <field name="fvrz_trainer_level_amount" readonly="1"/>
+                                <field name="fvrz_trainer_travel_allowance_amount" readonly="1"/>
+                                <strong><field name="fvrz_total_allowance_amount" readonly="1"/></strong>
+                            </group>
+                        </group>
+
+                        <div class="container mt16 mb0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>FVRZ Trainer General Allowance</h3>
+                                    <table class="table table-sm table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Level</th>
+                                                <th>Per Week</th>
+                                                <th>Per Season</th>
+                                                <th>Annually</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>1</strong></td>
+                                                <td>
+                                                    <ul>
+                                                        <li>3-4 training sessions</li>
+                                                        <li>3 team meetings</li>
+                                                        <li>2 trainer meetings</li>
+                                                        <li>1-2 league/cup matches</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <ul>
+                                                        <li>1 trainingscamp</li>
+                                                        <li>1 trainingsweekend</li>
+                                                        <li>3 tournaments</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <strong>6'000.00</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2</strong></td>
+                                                <td>
+                                                    <ul>
+                                                        <li>2-3 training sessions</li>
+                                                        <li>2 team meetings</li>
+                                                        <li>1 trainer meeting</li>
+                                                        <li>1-2 league/cup matches</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <ul>
+                                                        <li>1 camp or weekend</li>
+                                                        <li>2 tournaments</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <strong>4'000.00</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>3</strong></td>
+                                                <td>
+                                                    <ul>
+                                                        <li>1-2 training sessions</li>
+                                                        <li>1 team meeting</li>
+                                                        <li>1 league/cup match</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <ul>
+                                                        <li>1 camp or weekend</li>
+                                                        <li>6 tournament</li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <strong>2'900.00</strong>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>FVRZ Trainer Travel Allowance</h3>
+                                    <p>
+                                        Travel Allowance is based on the distance <strong>(Privat Home =&gt; Club fields =&gt; Privat Home)</strong>.
+                                    </p>
+                                    <table class="table table-sm table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Level</th>
+                                                <th>01 - 05km</th>
+                                                <th>06 - 15km</th>
+                                                <th>16 - 25km</th>
+                                                <th>> 26km</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>1</strong></td>
+                                                <td>1'800.00</td>
+                                                <td>2'900.00</td>
+                                                <td>4'100.00</td>
+                                                <td>6'800.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2</strong></td>
+                                                <td>1'500.00</td>
+                                                <td>2'300.00</td>
+                                                <td>3'100.00</td>
+                                                <td>5'100.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>3</strong></td>
+                                                <td>1'300.00</td>
+                                                <td>1'800.00</td>
+                                                <td>2'400.00</td>
+                                                <td>3'800.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="https://www.fvrz.ch/Portaldata/10/Resources/dokumente/weisungenhandbuch/Spesenreglement_TrainerVersion1.pdf" target="_blank">
+                                        Spesenreglement für Trainer von Fussballvereinen des Fussballverbandes Region Zürich (FVRZ)
+                                    </a><br/>
+                                    (gültig ab 01.01.2011)
+                                </div>
+                            </div>
+                        </div>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
