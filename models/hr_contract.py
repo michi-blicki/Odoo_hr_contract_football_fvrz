@@ -61,9 +61,6 @@ class HrContract(models.Model):
 
     @api.onchange('fvrz_trainer_travel_allowance')
     def _onchange_fvrz_trainer_travel_allowance(self):
-        if not self.fvrz_trainer_level:
-            raise UserError(_("Please select the FVRZ Trainer Level before selecting the Flat-rate travel allowance."))
-        
         if self.fvrz_trainer_level == 'trainer_level_1':
             if self.fvrz_trainer_travel_allowance == 'xshort':
                 self.fvrz_trainer_travel_allowance_amount = 1800
