@@ -23,6 +23,7 @@ class HrContract(models.Model):
         string="FVRZ Trainer Level Amount",
         currency_field='currency_id',
         readonly=True,
+        store=True,
     )
 
     fvrz_trainer_travel_allowance = fields.Selection(
@@ -39,6 +40,7 @@ class HrContract(models.Model):
         string="FVRZ Trainer Flat-rate travel allowance Amount",
         currency_field='currency_id',
         readonly=True,
+        store=True,
     )
 
     fvrz_total_allowance_amount = fields.Monetary(
@@ -46,6 +48,7 @@ class HrContract(models.Model):
         currency_field='currency_id',
         compute='_compute_fvrz_total_allowance_amount',
         readonly=True,
+        store=True,
     )
 
     @api.onchange('fvrz_trainer_level')
