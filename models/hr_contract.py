@@ -1,13 +1,37 @@
 # -*- coding: utf-8 -*-
 
-from dateutil.relativedelta import relativedelta
-
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import api, fields, models
 
 
 class HrContract(models.Model):
     _inherit = "hr.contract"
+
+    _FVRZ_LEVEL_AMOUNTS = {
+        'trainer_level_1': 6000,
+        'trainer_level_2': 4000,
+        'trainer_level_3': 2900,
+    }
+
+    _FVRZ_TRAVEL_AMOUNTS = {
+        'trainer_level_1': {
+            'xshort': 1800,
+            'short': 2900,
+            'medium': 4100,
+            'long': 6800,
+        },
+        'trainer_level_2': {
+            'xshort': 1500,
+            'short': 2300,
+            'medium': 3100,
+            'long': 5100,
+        },
+        'trainer_level_3': {
+            'xshort': 1300,
+            'short': 1800,
+            'medium': 2400,
+            'long': 3800,
+        },
+    }
 
     # FVRZ specific fields
     fvrz_trainer_level = fields.Selection(
@@ -18,10 +42,12 @@ class HrContract(models.Model):
             ('trainer_level_3', 'Trainer Level 3'),
         ],
         required=False,
+        store=True,
     )
     fvrz_trainer_level_amount = fields.Monetary(
         string="FVRZ Trainer Level Amount",
         currency_field='currency_id',
+        compute='_compute_fvrz_trainer_level_amount',
         readonly=True,
         store=True,
     )
@@ -35,10 +61,12 @@ class HrContract(models.Model):
             ('long', '>26km between home and club sport facility'),
         ],
         required=False,
+        store=True,
     )
     fvrz_trainer_travel_allowance_amount = fields.Monetary(
         string="FVRZ Trainer Flat-rate travel allowance Amount",
         currency_field='currency_id',
+        compute='_compute_fvrz_trainer_travel_allowance_amount',
         readonly=True,
         store=True,
     )
@@ -51,61 +79,21 @@ class HrContract(models.Model):
         store=True,
     )
 
-    @api.onchange('fvrz_trainer_level')
-    def _onchange_fvrz_trainer_level(self):
-        if self.fvrz_trainer_level == 'trainer_level_1':
-            self.fvrz_trainer_level_amount = 6000
-        elif self.fvrz_trainer_level == 'trainer_level_2':
-            self.fvrz_trainer_level_amount = 4000
-        elif self.fvrz_trainer_level == 'trainer_level_3':
-            self.fvrz_trainer_level_amount = 2900
-        else:
-            self.fvrz_trainer_level_amount = False
+    @api.depends('fvrz_trainer_level')
+    def _compute_fvrz_trainer_level_amount(self):
+        for contract in self:
+            contract.fvrz_trainer_level_amount = self._FVRZ_LEVEL_AMOUNTS.get(contract.fvrz_trainer_level, 0.0)
 
-    @api.onchange('fvrz_trainer_travel_allowance')
-    def _onchange_fvrz_trainer_travel_allowance(self):
-        if self.fvrz_trainer_level == 'trainer_level_1':
-            if self.fvrz_trainer_travel_allowance == 'xshort':
-                self.fvrz_trainer_travel_allowance_amount = 1800
-            elif self.fvrz_trainer_travel_allowance == 'short':
-                self.fvrz_trainer_travel_allowance_amount = 2900
-            elif self.fvrz_trainer_travel_allowance == 'medium':
-                self.fvrz_trainer_travel_allowance_amount = 4100
-            elif self.fvrz_trainer_travel_allowance == 'long':
-                self.fvrz_trainer_travel_allowance_amount = 6800
-            else:
-                self.fvrz_trainer_travel_allowance_amount = False
-        elif self.fvrz_trainer_level == 'trainer_level_2':
-            if self.fvrz_trainer_travel_allowance == 'xshort':
-                self.fvrz_trainer_travel_allowance_amount = 1500
-            elif self.fvrz_trainer_travel_allowance == 'short':
-                self.fvrz_trainer_travel_allowance_amount = 2300
-            elif self.fvrz_trainer_travel_allowance == 'medium':
-                self.fvrz_trainer_travel_allowance_amount = 3100
-            elif self.fvrz_trainer_travel_allowance == 'long':
-                self.fvrz_trainer_travel_allowance_amount = 5100
-            else:
-                self.fvrz_trainer_travel_allowance_amount = False
-        elif self.fvrz_trainer_level == 'trainer_level_3':
-            if self.fvrz_trainer_travel_allowance == 'xshort':
-                self.fvrz_trainer_travel_allowance_amount = 1300
-            elif self.fvrz_trainer_travel_allowance == 'short':
-                self.fvrz_trainer_travel_allowance_amount = 1800
-            elif self.fvrz_trainer_travel_allowance == 'medium':
-                self.fvrz_trainer_travel_allowance_amount = 2400
-            elif self.fvrz_trainer_travel_allowance == 'long':
-                self.fvrz_trainer_travel_allowance_amount = 3800
-            else:
-                self.fvrz_trainer_travel_allowance_amount = False
-        else:
-            self.fvrz_trainer_travel_allowance_amount = False
+    @api.depends('fvrz_trainer_level', 'fvrz_trainer_travel_allowance')
+    def _compute_fvrz_trainer_travel_allowance_amount(self):
+        for contract in self:
+            level_amounts = self._FVRZ_TRAVEL_AMOUNTS.get(contract.fvrz_trainer_level, {})
+            contract.fvrz_trainer_travel_allowance_amount = level_amounts.get(contract.fvrz_trainer_travel_allowance, 0.0)
 
     @api.depends('fvrz_trainer_level_amount', 'fvrz_trainer_travel_allowance_amount')
     def _compute_fvrz_total_allowance_amount(self):
         for contract in self:
-            total_amount = 0
-            if contract.fvrz_trainer_level_amount:
-                total_amount += contract.fvrz_trainer_level_amount
-            if contract.fvrz_trainer_travel_allowance_amount:
-                total_amount += contract.fvrz_trainer_travel_allowance_amount
-            contract.fvrz_total_allowance_amount = total_amount
+            contract.fvrz_total_allowance_amount = (
+                (contract.fvrz_trainer_level_amount or 0.0)
+                + (contract.fvrz_trainer_travel_allowance_amount or 0.0)
+            )
