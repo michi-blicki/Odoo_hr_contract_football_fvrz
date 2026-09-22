@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-09 09:36+0000\n"
-"PO-Revision-Date: 2026-06-09 11:37+0200\n"
+"POT-Creation-Date: 2026-09-13 07:18+0000\n"
+"PO-Revision-Date: 2026-09-13 09:19+0200\n"
 "Last-Translator: Michael Blickenstorfer <michi@blicki.ch>\n"
 "Language-Team: \n"
 "Language: de_CH\n"
@@ -28,7 +28,7 @@ msgid "01 - 05km"
 msgstr "01 - 05klm"
 
 #. module: hr_contract_football_fvrz
-#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__xshort
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__1
 msgid "01 - 05km between home and club sport facility"
 msgstr "01 - 05km zwischen Wohnort und Sportanlage Stammverein"
 
@@ -38,7 +38,7 @@ msgid "06 - 15km"
 msgstr "06 - 15km"
 
 #. module: hr_contract_football_fvrz
-#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__short
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__2
 msgid "06 - 15km between home and club sport facility"
 msgstr "06 - 15km zwischen Wohnort und Sportanlage Stammverein"
 
@@ -88,7 +88,7 @@ msgid "16 - 25km"
 msgstr "16 - 25km"
 
 #. module: hr_contract_football_fvrz
-#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__medium
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__3
 msgid "16 - 25km between home and club sport facility"
 msgstr "16 - 25km zwischen Wohnort und Sportanlage Stammverein"
 
@@ -134,6 +134,15 @@ msgstr "6 Turniere"
 
 #. module: hr_contract_football_fvrz
 #: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
+msgid ""
+"<br/>\n"
+"                                    (gültig ab 01.01.2011)"
+msgstr ""
+"<br/>\r\n"
+"                                    (gültig ab 01.01.2011)"
+
+#. module: hr_contract_football_fvrz
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
 msgid "<strong>1</strong>"
 msgstr "<strong>1</strong>"
 
@@ -163,7 +172,7 @@ msgid "<strong>6'000.00</strong>"
 msgstr "<strong>6'000.00</strong>"
 
 #. module: hr_contract_football_fvrz
-#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__long
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_travel_allowance__4
 msgid ">26km between home and club sport facility"
 msgstr ">26km zwischen Wohnort und Sportanlage Stammverein"
 
@@ -224,8 +233,6 @@ msgstr "Stufe"
 
 #. module: hr_contract_football_fvrz
 #: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
-#, fuzzy
-#| msgid "Per Month"
 msgid "Per Season"
 msgstr "Pro Saison"
 
@@ -235,27 +242,26 @@ msgid "Per Week"
 msgstr "Pro Woche"
 
 #. module: hr_contract_football_fvrz
-#. odoo-python
-#: code:addons/hr_contract_football_fvrz/models/hr_contract.py:0
+#: model_terms:ir.ui.view,arch_db:hr_contract_football_fvrz.view_hr_contract_form_football_fvrz
 msgid ""
-"Please select the FVRZ Trainer Level before selecting the Flat-rate travel "
-"allowance."
+"Spesenreglement für Trainer von Fussballvereinen des Fussballverbandes "
+"Region Zürich (FVRZ)"
 msgstr ""
-"Bitte zunächst die Trainerstufe festlegen, bevor die Fahrdistanz ausgewählt "
-"wird."
+"Spesenreglement für Trainer von Fussballvereinen des Fussballverbandes "
+"Region Zürich (FVRZ)"
 
 #. module: hr_contract_football_fvrz
-#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__trainer_level_1
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__1
 msgid "Trainer Level 1"
 msgstr "Trainerstufe 1"
 
 #. module: hr_contract_football_fvrz
-#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__trainer_level_2
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__2
 msgid "Trainer Level 2"
 msgstr "Trainerstufe 2"
 
 #. module: hr_contract_football_fvrz
-#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__trainer_level_3
+#: model:ir.model.fields.selection,name:hr_contract_football_fvrz.selection__hr_contract__fvrz_trainer_level__3
 msgid "Trainer Level 3"
 msgstr "Trainerstufe 3"
 
@@ -266,4 +272,11 @@ msgid ""
 "fields =&gt; Privat Home)</strong>."
 msgstr ""
 "Pauschale Fahrspesen berechnen sich auf Basis der Distanz <strong>(Wohnort "
-"=&gt; Sportanlagen Stammverein =&gt; Wohnort)</strong>"
+"=&gt; Sportanlagen Stammverein =&gt; Wohnort)</strong>."
+
+#~ msgid ""
+#~ "Please select the FVRZ Trainer Level before selecting the Flat-rate "
+#~ "travel allowance."
+#~ msgstr ""
+#~ "Bitte zunächst die Trainerstufe festlegen, bevor die Fahrdistanz "
+#~ "ausgewählt wird."

@@ -7,29 +7,29 @@ class HrContract(models.Model):
     _inherit = "hr.contract"
 
     _FVRZ_LEVEL_AMOUNTS = {
-        'trainer_level_1': 6000,
-        'trainer_level_2': 4000,
-        'trainer_level_3': 2900,
+        '1': 6000,
+        '2': 4000,
+        '3': 2900,
     }
 
     _FVRZ_TRAVEL_AMOUNTS = {
-        'trainer_level_1': {
-            'xshort': 1800,
-            'short': 2900,
-            'medium': 4100,
-            'long': 6800,
+        '1': {
+            '1': 1800,
+            '2': 2900,
+            '3': 4100,
+            '4': 6800,
         },
-        'trainer_level_2': {
-            'xshort': 1500,
-            'short': 2300,
-            'medium': 3100,
-            'long': 5100,
+        '2': {
+            '1': 1500,
+            '2': 2300,
+            '3': 3100,
+            '4': 5100,
         },
-        'trainer_level_3': {
-            'xshort': 1300,
-            'short': 1800,
-            'medium': 2400,
-            'long': 3800,
+        '3': {
+            '1': 1300,
+            '2': 1800,
+            '3': 2400,
+            '4': 3800,
         },
     }
 
@@ -37,9 +37,9 @@ class HrContract(models.Model):
     fvrz_trainer_level = fields.Selection(
         string='FVRZ Trainer Level',
         selection=[
-            ('trainer_level_1', 'Trainer Level 1'),
-            ('trainer_level_2', 'Trainer Level 2'),
-            ('trainer_level_3', 'Trainer Level 3'),
+            ('1', 'Trainer Level 1'),
+            ('2', 'Trainer Level 2'),
+            ('3', 'Trainer Level 3'),
         ],
         required=False,
         store=True,
@@ -55,10 +55,10 @@ class HrContract(models.Model):
     fvrz_trainer_travel_allowance = fields.Selection(
         string='FVRZ Trainer Flat-rate travel allowance',
         selection=[
-            ('xshort', '01 - 05km between home and club sport facility'),
-            ('short', '06 - 15km between home and club sport facility'),
-            ('medium', '16 - 25km between home and club sport facility'),
-            ('long', '>26km between home and club sport facility'),
+            ('1', '01 - 05km between home and club sport facility'),
+            ('2', '06 - 15km between home and club sport facility'),
+            ('3', '16 - 25km between home and club sport facility'),
+            ('4', '>26km between home and club sport facility'),
         ],
         required=False,
         store=True,
